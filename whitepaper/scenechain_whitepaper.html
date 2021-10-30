@@ -332,7 +332,7 @@ p.manifesto {
 <p>The long-term vision of <span class="sc">Scenechain</span> is to make high-quality audiovisual generative art a store of value.   </p>
 
 <h2>About generative art and the demoscene</h2>
-<p>If you are not familiar with generative art and the demoscene this is an important chapter to understand this whitepaper. Otherwise you can skip ahead to the <em><span class="sc">Scenechain</span> basics</em> chapter.</p>
+<p>If you are not familiar with generative art and the demoscene this is an important chapter to understand this whitepaper. Otherwise, you can skip ahead to the <em><span class="sc">Scenechain</span> basics</em> chapter.</p>
 <p>Quoting from Wikipedia:</p>
 <blockquote>
 <p>Generative art refers to art that in whole or in part has been created with the use of an autonomous system. ... it often refers to algorithmic art (algorithmically determined computer generated artwork) and synthetic media (general term for any algorithmically-generated media).</p>
@@ -349,22 +349,24 @@ p.manifesto {
 <blockquote>
 <p>The demoscene: is an international computer art subculture focused on producing demos: self-contained, sometimes extremely small, computer programs that produce audiovisual presentations. </p>
 </blockquote>
-<p>The demoscene started in the early 1980s. In the demoscene there are demo categories which artifically restrict the program size of the demos. The most widespread categories are the the 64Kbyte demos and the 4KByte demos. Because of the small code size these artworks rely very heavily on algorithmic generation. The most beautiful 64Kbyte or 4Kbyte demos are basically high-quality generative artworks.</p>
+<p>The demoscene started in the early 1980s. In the demoscene, there are demo categories that artificially restrict the program size of the demos.
+The most widespread categories are the 64Kbyte demos and the 4KByte demos. Because of the small code size, these artworks rely very heavily on algorithmic generation.
+The most beautiful 64Kbyte or 4Kbyte demos are basically high-quality generative artworks.</p>
 <p>This is one of the best 64kbyte demos of all time:</p>
 <p><a href="https://www.youtube.com/watch?v=MAnhcUNHRW0" title="Chaos Theory by Conspiracy">https://www.youtube.com/watch?v=MAnhcUNHRW0</a></p>
-<p>And here is one of the most amazing 4kbyte one:</p>
+<p>And here is one of the most amazing 4kbyte ones:</p>
 <p><a href="https://www.youtube.com/watch?v=jB0vBmiTr6o" title="elevated by Rgba &amp; TBC">https://www.youtube.com/watch?v=jB0vBmiTr6o</a></p>
 
 <h2>Scenechain basics</h2>
-<p><span class="sc">Scenechain</span> demos work on a virtual demo-machine which we call the <strong class="sc">Scenechain Virtual Machine</strong>, which is basically a webassemmly virtual machine with some audio-visual APIs that are thin webassembly wrappers of browser APIs like <code>WebGL</code>, <code>Web-Audio</code> and the <code>Canvas API</code>.
-In practice <span class="sc">Scenechain</span> demos work in a webbrowser. </p>
+<p><span class="sc">Scenechain</span> demos work on a virtual demo machine which we call the <strong class="sc">Scenechain Virtual Machine</strong>, which is basically a webassembly virtual machine with some audio-visual APIs that are thin webassembly wrappers of browser APIs like <code>WebGL</code>, <code>Web-Audio</code> and the <code>Canvas API</code>.
+In practice, <span class="sc">Scenechain</span> demos work in a web browser. </p>
 <p>The <span class="sc">Scenechain</span> demo code lives in the <strong class="sc">Scenechain code space</strong>. The <span class="sc">Scenechain code space</span> is limited:
 Anyone can upload code to the code space in a permissionless way, but it costs SCODE tokens to upload code. SCODE is a scarce deflationary asset.
-This way creators are incentivized to achieve the desired audio-visual effect using as small code-size as possible. The created demos are NFTs which can be sold for Solana.</p>
+This way creators are incentivized to achieve the desired audio-visual effect using as small code-size as possible. The created demos are NFTs that can be sold for Solana.</p>
 <h2>Composability</h2>
-<p>The above mentioned mechanism would create an interesting NFT marketplace, but the secret sauce and core innovation of <span class="sc">Scenechain</span> is that it also incentivizes creative collaboration through composability (otherwise known by programmers as <em>code reuse</em>).
+<p>The above-mentioned mechanism would create an interesting NFT marketplace, but the secret sauce and core innovation of <span class="sc">Scenechain</span> are that it also incentivizes creative collaboration through composability (otherwise known by programmers as <em>code reuse</em>).
 Creating useful reusable open-source code libraries always suffered from the <strong>tragedy-of-commons</strong> problem: people gain tremendous value from these libraries but their creators are not financially rewarded for it.
-In <span class="sc">Scenechain</span> in order to create amazing demos with small code-size, creators are incentivized to refer to other already uploaded code libraries and call functions from them,
+In <span class="sc">Scenechain</span> in order to create amazing demos with small code size, creators are incentivized to refer to other already uploaded code libraries and call functions from them,
 because as we will see it is cheaper to refer to code than to duplicate it. The creators of the libraries are automatically rewarded when other creators reuse their code.
 We will present an example in the next chapter on how this composability can be used to achieve great things using other people's work.
 We believe that in the future it will also be used in ways that we cannot anticipate today.
@@ -374,7 +376,7 @@ We believe that in the future it will also be used in ways that we cannot antici
 <p>Creators can upload so-called <strong class="sc">Scenechain packages</strong> to the <span class="sc">Scenechain code space</span>. A <span class="sc">Scenechain package</span> is a webassembly module plus a little metadata.</p>
 <p>Package upload costs SCODE tokens: we will discuss the details of cost calculation later. <span class="sc">Scenechain packages</span> are immutable: once uploaded cannot be modified and are there forever.
 The package is the unit of ownership in <span class="sc">Scenechain</span>. When a package is uploaded its uploader becomes its first owner. Packages can be traded as NFT-s.</p>
-<p>A <span class="sc">Scenechain package</span> - being basically a webassembly module - contains webassembly <strong>functions</strong>. Some of these functions are declared <strong>exported functions</strong>.
+<p>A <span class="sc">Scenechain package</span> - being a webassembly module - contains webassembly <strong>functions</strong>. Some of these functions are declared <strong>exported functions</strong>.
 An exported function in one package can be <strong>imported</strong> and called from any other (later) package in the code space: this is the way creators can reuse already uploaded code.</p>
 <p class="info">
 Note that exported and imported functions are not a <span class="sc">Scenechain</span> invention, they are part of the webassembly format, <span class="sc">Scenechain</span> just uses a naming convention that the package id (which is a Solana account id) is the name used as webassembly module name when importing.</p>
@@ -412,13 +414,13 @@ operator_reward is payed to the operator of the webapp (or other kind of off-cha
 <h3>Dependency royalties</h3>
 <p>Designing a good system to distribute royalties to dependencies is not trivial.
 The problem is that if the system is designed in a naive way there will be profitable strategies to upload packages in a way that is not good for the ecosystem.
-The most obvious of these behaviours is to create copycats of every interesting library.
-If we design algorithms to discourage this then we get other kind of more nuanced vulnerabilities like actors manage to pay lots of royalties to themselves.</p>
+The most obvious of these behaviors is to create copycats of every interesting library.
+If we design algorithms to discourage this then we get other kinds of more nuanced vulnerabilities like actors managing to pay lots of royalties to themselves.</p>
 <p>We considered multiple complex systems to solve these problems purely with algorithms. Each of these systems has some drawbacks and some of them are very complicated.
-Eventually we decided to go with a relatively simple system and not only rely on algorithms but also on <strong>social contracts</strong> in the community. </p>
-<p>First of all <code>dependency_cost</code> is 0 for library packages. (packages that do not have a <code>_play()</code> function)</p>
-<p>For demo packages the <code>dependency_cost</code> is calculated based on the functions called from the <code>_play()</code> function of this package and the functions called by them recursively.
-First a list of all these called functions is assembled, which we call dependencies. Then for each such dependency a cost contribution is calculated as the size of the function multiplied by a <code>p</code> quotient. </p>
+Eventually, we decided to go with a relatively simple system and not only rely on algorithms but also on <strong>social contracts</strong> in the community. </p>
+<p>First of all, <code>dependency_cost</code> is 0 for library packages. (packages that do not have a <code>_play()</code> function)</p>
+<p>For demo packages, the <code>dependency_cost</code> is calculated based on the functions called from the <code>_play()</code> function of this package and the functions called by them recursively.
+First, a list of all these called functions is assembled, which we call dependencies. Then for each such dependency, a cost contribution is calculated as the size of the function multiplied by a <code>p</code> quotient. </p>
 <pre><code>dependency_cost = for_each_dependency_function_F(size(F) * p)
 </code></pre>
 
@@ -428,7 +430,7 @@ First a list of all these called functions is assembled, which we call dependenc
 
 <p>This cost is simply transferred to the owners of the dependency functions.</p>
 
-<p>In addition to the math the social contract used here is that the community values originality and reuse of original code where possible.
+<p>In addition to the math, the social contract used here is that the community values originality and reuse of original code where possible.
 Any demo which has a library that has obvious copycats in their dependency tree will be worth less by NFT collectors than the ones that use the ecosystem as intended.
 We will discuss <span class="sc">Scenechain</span> social contracts in more detail in the <em class="sc">Scenechain manifesto</em> chapter.   </p>
 
@@ -437,21 +439,21 @@ We will discuss <span class="sc">Scenechain</span> social contracts in more deta
 The formula incentivizes the usage of functions earlier in the code space: besides the social contracts mentioned above,
 this is also something that incentivizes original work instead of copycats.</p>
 <p>This mechanism implies that it is profitable to publish a library if its functions will be called (directly or indirectly) from at least 20-33 demos on average.
-(Actually sometimes a package can be profitable with significantly less use because as we will see the dependencies of a package also get some royalties from package sales.)
-Anyway 20-33 usage can be easily achieved in case certain generic functions.
-Also note that if a creator needs to write a function for a demo anyway it might be a good idea to export it even if only 1 or 2 packages would use it.</p>
+(Actually, sometimes a package can be profitable with significantly less use because as we will see the dependencies of a package also get some royalties from package sales.)
+Anyway, 20-33 usage can be easily achieved in the case of certain generic functions.
+Also, note that if a creator needs to write a function for a demo anyway it might be a good idea to export it even if only 1 or 2 packages would use it.</p>
 
 <h3>Tokenomics implications to the size of the code space</h3>
 <p>Because 0.98 SCODE from the 1,000,000,000 SCODE is always burnt for each uploaded byte the maximum capacity of the code space is around 1 GByte.
-The code space seems extremely scarce, and it is, but people familiar with 4Kbyte demos know what very creative people can achieve in small codesizes.
+The code space seems extremely scarce, and it is, but people familiar with 4Kbyte demos know what very creative people can achieve in small code sizes.
 Also here the possibility to cheaply reuse other people's code means that we will see traditional 4Kbyte demo quality in much smaller sizes.
-The decision for the 1,000,000,000 initial SCODE tokens was a tradeoff. We want to simulate the renaissance Florence:
-There must be enough code space to have a vibrant ecosystem for the years to come and to be profitable creating amazing art and useful libraries in the early years.
-On the other hand we need extreme scarcity for the conservative long-term art NFT collectors.</p>
+The decision for the 1,000,000,000 initial SCODE tokens was a tradeoff. We want to simulate Renaissance Florence:
+There must be enough code space to have a vibrant ecosystem for the years to come and to be profitable in creating amazing art and useful libraries in the early years.
+On the other hand, we need extreme scarcity for the conservative long-term art NFT collectors.</p>
 <h3>NFT trading cost and royalties</h3>
 <p>Once a package is uploaded it can be traded for SOL tokens. There is a 0.2% <code>trading_fee</code> involved which is paid to the operator (similarly to <code>operator_reward</code> in case of package upload). </p>
-<p>We have seen that dependent functions get royalty from package uploads. There is also a mechanism that dependencies get a little bit of profit from high value package sales. It works the following way:
-For each package its highest-ever sale price is recorded. (all-time-high price). When a package is sold for a new all-time high price, a bonus needs to be paid by the buyer.
+<p>We have seen that dependent functions get royalties from package uploads. There is also a mechanism that dependencies get a little bit of profit from high-value package sales. It works the following way:
+For each package, its highest-ever sale price is recorded. (all-time-high price). When a package is sold for a new all-time high price, a bonus needs to be paid by the buyer.
 This bonus is distributed among the dependencies of the package weighted using the already known weights (<code>size(F) * p</code>). The bonus is calculated as follows:
 </p>
 <pre><code>ath_royalty_bonus = (new_ath - previous_ath) * 0.05
@@ -463,8 +465,8 @@ This bonus is distributed among the dependencies of the package weighted using t
 <p class="manifesto">The ultimate goal of the <span class="sc">Scenechain</span> community is to protect the ability of valuable <span class="sc">Scenechain packages</span> to be a long-term store of value.</p>
 <p class="manifesto">We believe that the above goal can be achieved through valuing innovation and collaboration.</p>
 <p class="manifesto">We value the original instead of the copycat.</p>
-<p class="manifesto">With regards to copycats not all cases are black-and-white.</p>
-<p class="manifesto">Because packages are immutable each package is responsible for all its dependency tree.</p>
+<p class="manifesto">With regards to copycats, not all cases are black-and-white.</p>
+<p class="manifesto">Because packages are immutable each package is responsible for the entirety of its dependency tree.</p>
 </p>
 <hr/>
 <br/>
@@ -472,14 +474,14 @@ This bonus is distributed among the dependencies of the package weighted using t
 <blockquote>
 <p>The ultimate goal of the <span class="sc">Scenechain</span> community is to protect the ability of valuable <span class="sc">Scenechain packages</span> to be a long-term store of value.</p>
 </blockquote>
-<p>Obviously the value of SCODE tokens will be higher as a consequence of the success of the above goal but
-the value of the SCODE token cannot be more important than the the ability of quality packages to be a long-term stable store of value.
+<p>Obviously, the value of SCODE tokens will be higher as a consequence of the success of the above goal but
+the value of the SCODE token cannot be more important than the ability of quality packages to be a long-term stable store of value.
 Without the packages having a stable long-term value SCODE tokens can only have vulnerable short-term speculative value.</p>
 <blockquote>
 <p>We believe that the above goal can be achieved through valuing innovation and collaboration.</p>
 </blockquote>
-<p>For this reason <span class="sc">Scenechain</span> is designed to incentivize innovation and collaboration via composition. On the other hand this must be done without violating our first point.
-An example is the SCODE token supply. Higher supply might foster more innovation on a longer time-horizon than the 1 billion supply but we needed a tradeoff here because we need significant scarcity to achieve our first goal.</p>
+<p>For this reason, <span class="sc">Scenechain</span> is designed to incentivize innovation and collaboration via composition. On the other hand, this must be done without violating our first point.
+An example is the SCODE token supply. Higher supply might foster more innovation on a longer time horizon than the 1 billion supply but we needed a tradeoff here because we need significant scarcity to achieve our first goal.</p>
 <blockquote>
 <p>We value the original instead of the copycat.</p>
 </blockquote>
@@ -488,59 +490,59 @@ When someone blatantly copies and reuploads a library already on <span class="sc
 Copycat authors might advertise their package both for investment and for importing.
 If they could succeed it would demotivate other authors to create original content. We envision that the community will create tools and databases where those packages can be flagged (with explanation).</p>
 <blockquote>
-<p>With regards to copycats not all cases are black-and-white</p>
+<p>With regards to copycats, not all cases are black-and-white</p>
 </blockquote>
-<p>We don't like when an exported function is just copied instead of imported from a new package. On the other hand if the function is not exported but solves an important general problem, it should be ok to copy.
+<p>We don't like when an exported function is just copied instead of imported from a new package. On the other hand, if the function is not exported but solves an important general problem, it should be ok to copy.
 (Example: Someone writes a nice short generic function to do Fast Fourier Transform on sound data inside a demo, but they do not export the function. Other people should copy and export it then.)
 But just copying every private function of a demo and publishing a very similar demo is not valuable. </p>
-<p>Some copies have some improvements on the original, in this case it is also ok to copy, but it can be a fine line.
-We certainly don't ban anything and we can value things just a little bit more or little bit less, we don't need black and white judgement all the time.</p>
+<p>Some copies have some improvements on the original, in this case, it is also ok to copy, but it can be a fine line.
+We certainly don't ban anything and we can value things just a little bit more or a little bit less, we don't need black and white judgment all the time.</p>
 <blockquote>
-<p>Because packages are immutable each package is responsible for all its dependency tree.</p>
+<p>Because packages are immutable each package is responsible for the entirety of its dependency tree.</p>
 </blockquote>
 <p>When importing a function from a package we should examine that package the same way as when we buy a package.
-Importing a blatant copycat makes the importer package also less valuable because 'unpunished' this behaviour would lead to profitable unproductive behaviour by copycat creators.</p>
+Importing a blatant copycat makes the importer package also less valuable because 'unpunished' this behavior would lead to profitable unproductive behaviour by copycat creators.</p>
 <p>As we mentioned there will be databases where creators can check whether a library has been flagged as a copycat suspect or not.
-Still it will probably happen that someone will import from a copycat accidentally.
+Still, it will probably happen that someone will import from a copycat accidentally.
 This should not render the importer package worthless, just a little bit less worthy.
-Human judgement is important in these cases, these are things that would be hard to solve only with algorithms.</p>
+Human judgment is important in these cases, these are things that would be hard to solve only with algorithms.</p>
 
 <h2>Scenechain off-chain code overview</h2>
-<p>The <span class="sc">Scenechain</span> on-chain code is responsible for the management of package uploads, cost calculation, royalty distribution and NFT trading.
+<p>The <span class="sc">Scenechain</span> on-chain code is responsible for the management of package uploads, cost calculation, royalty distribution, and NFT trading.
 It never actually executes the webassembly code inside the packages. The webassembly code is executed off-chain in the browser (or any environment that adheres to the <em class="sc">Scenechain Virtual Machine Specification</em>).
 Similarly to the on-chain code the <span class="sc">Scenechain</span> off-chain codebase is open-source.
-It contains a web application in which users can upload, browse and trade packages and run demos.
-The webapp will be run by the <span class="sc">Scenechain</span> team, but anyone else can run the webapp parallelly.
-Also, anyone can create similar webapps: it is not part of the <span class="sc">Scenechain protocol</span>.
-Strictly speaking the <span class="sc">Scenechain protocol</span> consists of the on-chain code and the <em class="sc">Scenechain Virtual Machine Specification</em>.
-(For example this specification will contain the audio-visual APIs available for the demos.)
+It contains a web application in which users can upload, browse and trade packages, and run demos.
+The web app will be run by the <span class="sc">Scenechain</span> team, but anyone else can run the web app parallelly.
+Also, anyone can create similar web apps: it is not part of the <span class="sc">Scenechain protocol</span>.
+Strictly speaking, the <span class="sc">Scenechain protocol</span> consists of the on-chain code and the <em class="sc">Scenechain Virtual Machine Specification</em>.
+(For example, this specification will contain the audio-visual APIs available for the demos.)
 The <span class="sc">Scenechain</span> off-chain code can be treated as a <strong>reference implementation</strong> of the off-chain parts of the protocol.</p>
-<p>The <span class="sc">Scenechain</span> webapp is basically a blockchain explorer and a lightweight development environment. It provides the following capabilities to the users:</p>
+<p>The <span class="sc">Scenechain</span> web app is a blockchain explorer and a lightweight development environment. It provides the following capabilities to the users:</p>
 <ul>
 <li>Users can browse packages in the order of upload. It is possible to filter for certain attributes like code size.</li>
 <li>It is possible to run the demos.</li>
-<li>The webassemlby code in packages can be viewed converted to textual webasembly.</li>
-<li>Possibly we will store other optional information off-chain for packages and they can be also viewed. (Example: original source code if the code was compiled from a higher-level language, Readme file, etc...)</li>
-<li>Creators can author and upload new packages. Also they can test the packages before upload.  </li>
+<li>The webassembly code in packages can be viewed converted to textual webassembly.</li>
+<li>Possibly we will store other optional information off-chain for packages and they can be also viewed. (Example: source code if the code was compiled from a higher-level language, Readme file, etc...)</li>
+<li>Creators can author and upload new packages. Also, they can test the packages before uploading.  </li>
 </ul>
 
 <h2>Smart contract tech details</h2>
-<p>Writing smart contracts for tasks that handle relatively large amount of data or does non-trivial amount of calculation is not a simple feat on any blockchain.
-Solana has remarkable throughput but the fix calculation limit in an instruction and the fix account data size limit needs careful consideration about how we arrange data and calculations to always fit into the limits.</p>
-<p>From the data-access perspective the Solana blockchain can be treated as a key-value store: Programs can own any number of accounts: the account's public key is the key, and the data stored in an account is the value.</p>
+<p>Writing smart contracts for tasks that handle a relatively large amount of data or do a non-trivial amount of calculation is not a simple feat on any blockchain.
+Solana has remarkable throughput but the fixed calculation limit in an instruction and the fixed account data size limit need careful consideration about how we arrange data and calculations to always fit into the limits.</p>
+<p>From the data-access perspective, the Solana blockchain can be treated as a key-value store: Programs can own any number of accounts: the account's public key is the key, and the data stored in an account is the value.</p>
 <p><span class="sc">Scenechain</span> will create one account for each uploaded package. Each package will contain its own position in bytes in the <span class="sc">Scenechain code space</span>.</p>
 <p>There will be an additional global Solana account to store global information such as:</p>
 <ul>
 <li>position in bytes in the code space of the last-added package</li>
-<li>public key of the last-added package</li>
+<li>the public key of the last-added package</li>
 </ul>
 <p>On Solana SOL needs to be paid for an account creation if we want the account to be rent-exempt forever.
-Luckily this cost is not too big for the data size we deal with in case of <span class="sc">Scenechain</span>. The package uploader will have to pay this SOL fee in addition to the SCODE cost of an upload.  </p>
+Luckily this cost is not too big for the data size we deal with in the case of <span class="sc">Scenechain</span>. The package uploader will have to pay this SOL fee in addition to the SCODE cost of an upload.  </p>
 
 <h3>Dependency royalty calculation in the smart contracts</h3>
 
 <p>
-The most resource-intensive calculation that needs to be executed in the smart contracts is the calculation of royalties. This would'nt even be feasible on most other chains, but needs an optimized
+The most resource-intensive calculation that needs to be executed in smart contracts is the calculation of royalties. This wouldn't even be feasible on most other chains but needs an optimized
 algorithm even on Solana to scale to complex Scenechain packages with large dependency trees.
 </p>
 
@@ -566,47 +568,47 @@ the precalculated dependency set of <code>F</code>.
 </p>
 
 <p>
-The above mentioned algorithm would be fast but would need significant storage for the precalculated dependency sets, so there is one more optimization: we only store the hash of the precalculated dependency set
-for each function in the blockchain. The actual depedency sets of the functions called by <code>F</code> has to be provided by the off-chain code to the <code>precalc_deps(F)</code> function. (The smart contract
+The above-mentioned algorithm would be fast but would need significant storage for the precalculated dependency sets, so there is one more optimization: we only store the hash of the precalculated dependency set
+for each function in the blockchain. The actual dependency sets of the functions called by <code>F</code> have to be provided by the off-chain code to the <code>precalc_deps(F)</code> function. (The smart contract
 checks whether they are correct by comparing their hash to the stored hash.)
 </p>
 
-<h2>Scenechain Virtual Machine and webapp tech details</h2>
-<p><span class="sc">Scenechain</span> demo developers will need to create packages which contain webassembly functions which will run
+<h2>Scenechain Virtual Machine and web app tech details</h2>
+<p><span class="sc">Scenechain</span> demo developers will need to create packages that contain webassembly functions which will run
 in the browser in a sandboxed environment.
-In these functions they will be able to use the <strong class="sc">Scenechain Demo API</strong>. The <span class="sc">Scenechain Demo API</span> contains
+In these functions, they will be able to use the <strong class="sc">Scenechain Demo API</strong>. The <span class="sc">Scenechain Demo API</span> contains
 the low-level functions to create visuals and sound effects programmatically, and also will
-contain functions to gain user-input to be able to create interactive experiences. The <span class="sc">Scenechain</span> Demo API will
-be mostly a thin wrapper around <code>WebGL</code>, <code>Web-Audio</code> and the <code>Canvas API</code> which we will expose from the embedding Javascript environment.
+contain functions to gain user input to be able to create interactive experiences. The <span class="sc">Scenechain</span> Demo API will
+be mostly a thin wrapper around <code>WebGL</code>, <code>Web-Audio</code>, and the <code>Canvas API</code> which we will expose from the embedding Javascript environment.
 The webassembly code will be heavily sandboxed: not being able to access anything which is not part of the <span class="sc">Scenechain Demo API</span>.</p>
 <p>The demos can decide the viewport size they use and they can communicate this to the embedding environment, so the embedding environment may decide what resolution it uses during playback.
-Demos are encouraged to use the <strong>1080p</strong> resolution today, but this is not a requirement in the protocol, as the community may decide to prefer higher resolutions in case of later demos.</p>
-<p>The smart contracts do not and cannot decide whether a webassemlby demo is buggy or not. People will simply not collect demos that are are deemed not worthy.
-The client code only needs to ensure that sandboxing works well and the webapp does not hang when the webassembly code is not responsive.    </p>
-<p>The <span class="sc">Scenechain</span> webapp will be developed using Nodejs and Javascript on the server side. In the browser we will use Reactjs with Javascript.</p>
+Demos are encouraged to use the <strong>1080p</strong> resolution today, but this is not a requirement in the protocol, as the community may decide to prefer higher resolutions in the case of later demos.</p>
+<p>The smart contracts do not and cannot decide whether a webassembly demo is buggy or not. People will simply not collect demos that are deemed not worthy.
+The client code only needs to ensure that sandboxing works well and the web app does not hang when the webassembly code is not responsive.    </p>
+<p>The <span class="sc">Scenechain</span> web app will be developed using Nodejs and Javascript on the server-side. In the browser, we will use Reactjs with Javascript.</p>
 <p>Please note that the webassembly modules in the packages cannot be used as they are in the browser.
 They lack the <span class="sc">Scenechain Demo API</span> imports and also only one module can be executed at one time in the browser.
-For this reason when running a demo package, the webapp will recursively download all its dependencies, and merge them together into an <strong>executable</strong> webassembly module.
-In case of the packages in <code>Picture 2</code>, if we want to run the demo <code>Dave's awesome demo</code>, all the packages on the picture will be downloaded and merged. During merge the following happens:</p>
+For this reason, when running a demo package, the web app will recursively download all its dependencies, and merge them into an <strong>executable</strong> webassembly module.
+In the case of the packages in <code>Picture 2</code>, if we want to run the demo <code>Dave's awesome demo</code>, all the packages on the picture will be downloaded and merged. During the merge, the following happens:</p>
 <ul>
 <li>All the functions in all the packages are appended together</li>
-<li>Intermediary exports and imports are eliminated, the only exports remaining are the exports of the demo package starting with underscore.</li>
+<li>Intermediary exports and imports are eliminated, the only exports remaining are the exports of the demo package starting with an underscore.</li>
 <li>Function indices are reshuffled (for example in call instructions)</li>
 <li>Imports are added from the embedding environment to support the <span class="sc">SceneChain Demo API</span>.</li>
 </ul>
 <h2>Development Roadmap</h2>
-<p>Before the mainnet release the main focus is on creating robust fundamentals on which the team and the community can build.
-The ux will be a bit bare-bones and the only programming language supported will be textual webassembly.
-Some of the efforts will be partly paralellized, but the rough order is the following:</p>
+<p>Before the mainnet release, the main focus is on creating robust fundamentals on which the team and the community can build.
+The UX will be a bit bare-bones and the only programming language supported will be textual webassembly.
+Some of the efforts will be partly parallelized, but the rough order is the following:</p>
 <ul>
 <li>Webassembly format operations (like merging packages)</li>
 <li>Smart contract development</li>
 <li><span class="sc">Scenechain Demo API</span> development</li>
 <li>Webapp development</li>
 </ul>
-<p>After the mainnet release we can concentrate more on higher-level convenience features which are implemented in offchain code. Examples:</p>
+<p>After the mainnet release, we can concentrate more on higher-level convenience features which are implemented in off-chain code. Examples:</p>
 <ul>
-<li>good development environment ux </li>
+<li>good development environment UX</li>
 <li>possibly using higher level languages. </li>
 <li>library discoverability features   </li>
 </ul>

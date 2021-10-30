@@ -315,13 +315,20 @@ p.manifesto {
   font-variant: small-caps;
 }
 
+h1 img  {
+	width: 32px;
+	height: 32px;
+}
+
 </style>
 </head>
 <body>
 
-<h1>Scenechain Whitepaper</h1>
+<h1><img src="schenechain_logo_twitter.png"/> Scenechain Whitepaper</h1>
 
 <h6>v0.2.1 - Oct 23 2021</h6>
+
+
 
 <p class="info">Please note that until the release of the <strong class="sc">Scenechain mainnet</strong> the <strong class="sc">Scenechain whitepaper</strong> should be considered under development.</p>
 <p><strong class="sc">Scenechain</strong> is a collaborative generative-art NFT creation platform built on Solana. It is using:</p>
@@ -396,7 +403,9 @@ She is not a coder though: her package contains just a few lines of code and her
 calls Carol's music visualizer to display something on the screen during the music and calls Bob's music player to play the music. In addition to this she exports a <code>get_song()</code> function so that demo coders
 who are not composers can create demos based on her music. This is what Dave does with his demo: Uses Eve's music during his demo and also uses Bob's music player library to play the music.</p>
 <h2>SCODE tokenomics</h2>
-<p>There is 1,000,000,000 SCODE tokens in the beginning. (1 SCODE = 1000,000 OPCODE: OPCODE is the smallest possible unit.) SCODE is a deflationary token, because as we will see a lot of it will be burnt when used, and no SCODE token is released besides the genesis 1,000,000,000 ever.</p>
+<p>SCODE is a standard spl token on Solana. Its token address is: <code>HWnfNCDHWJqqXQBpF379ubyLPhk8sdvFAa2mBsn4T6Bz</code></p>
+<p>1,000,000,000 SCODE tokens has been minted in the beginning.
+SCODE is a deflationary token, because as we will see a lot of it will be burnt when used, and no SCODE token is released besides the genesis 1,000,000,000 ever.</p>
 <p>The cost of a package upload is calculated as follows:</p>
 <pre><code>upload_cost = base_cost + dependency_cost
 </code></pre>
@@ -596,6 +605,23 @@ In the case of the packages in <code>Picture 2</code>, if we want to run the dem
 <li>Function indices are reshuffled (for example in call instructions)</li>
 <li>Imports are added from the embedding environment to support the <span class="sc">SceneChain Demo API</span>.</li>
 </ul>
+
+<h2>Roadmap</h2>
+
+<p>Happended so far:</p>
+
+<ul>
+<li>September 2021: The start of Scenechain development</li>
+<li>Oktober 25, 2021: The 1,000,000,000 SCODE tokens have been minted</li>
+</ul>
+
+<p>Future plans:</p>
+
+<ul>
+<li>November 2021: airdrops and token sale(s)</li>
+<li>March 2021: Mainnet release</li>
+</ul>
+
 <h2>Development Roadmap</h2>
 <p>Before the mainnet release, the main focus is on creating robust fundamentals on which the team and the community can build.
 The UX will be a bit bare-bones and the only programming language supported will be textual webassembly.
@@ -612,13 +638,40 @@ Some of the efforts will be partly parallelized, but the rough order is the foll
 <li>possibly using higher level languages. </li>
 <li>library discoverability features   </li>
 </ul>
-<h2>Tokenomics</h2>
+<h2>Token allocation</h2>
 <ul>
-<li>25% - Team. Part of it gradually unlocks over 3 years for existing team members. Part of it is reserved for future members.</li>
-<li>25% - VC and/or public sale</li>
+<li>25% - Team allocation</li>
 <li>25% - Airdrops</li>
-<li>25% - Treasury (grants will be decided by using the SCODE token as governance token)</li>
+<li>25% - Seed funds and/or public sale</li>
+<li>25% - Ecosystem funds</li>
 </ul>
+
+<h3>Team allocation</h3>
+
+<p>
+Part of it (16%) gradually unlocks over 3 years for existing team members. Part of it (9%) is reserved for future team members.
+For existing team members the 3 year lock period will start before the public token sales.
+</p>
+
+<h3>Seed funds and/or Public sale</h3>
+
+<p>
+Funds collected from this will be used for <strong class="sc">Scenechain</strong> development.
+</p>
+
+<h3>Airdrops</h3>
+
+<p>
+Some airdrop campaigns will happen before the public sale and some will happen after it.
+In the airdrop campaigns before the public sale, people will be able to apply for tokens, but those tokens will be actually airdropped
+only after the public sale. This way airdropped funds will not participate in the initial price discovery of SCODE.
+</p>
+
+<h3>Ecosystem funds</h3>
+
+<p>
+Grants will be decided by the <strong class="sc">Scenechain</strong> team in the beginning. Eventually, grants will be decided by a decentralized governance mechanism. 
+</p>
 
 </body>
 </html>

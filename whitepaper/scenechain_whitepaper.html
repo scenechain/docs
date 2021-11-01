@@ -326,7 +326,7 @@ h1 img  {
 
 <h1><img src="schenechain_logo_twitter.png"/> Scenechain Whitepaper</h1>
 
-<h6>v0.2.1 - Oct 23 2021</h6>
+<h6>v0.3 - Nov 1 2021</h6>
 
 <p>Website: <a href="https://scenechain.org/">https://scenechain.org</a></p>
 
@@ -338,42 +338,49 @@ h1 img  {
 </ul>
 <p>The long-term vision of <span class="sc">Scenechain</span> is to make high-quality audiovisual generative art a store of value.   </p>
 
-<h2>About generative art and the demoscene</h2>
-<p>If you are not familiar with generative art and the demoscene this is an important chapter to understand this whitepaper. Otherwise, you can skip ahead to the <em><span class="sc">Scenechain</span> basics</em> chapter.</p>
+<h2>About generative art</h2>
+<p>If you are familiar with generative art you can skip ahead to the <em><span class="sc">Scenechain</span> basics</em> chapter.</p>
 <p>Quoting from Wikipedia:</p>
 <blockquote>
 <p>Generative art refers to art that in whole or in part has been created with the use of an autonomous system. ... it often refers to algorithmic art (algorithmically determined computer generated artwork) and synthetic media (general term for any algorithmically-generated media).</p>
 </blockquote>
-<p>There are 2 quite distinct communities involved with generative art: the more traditional art scene and the demoscene.</p>
+<p>There are the following communities involved with generative art: the more traditional art scene, the Demoscene and the NFT movement.</p>
 <h3>Generative art in the art scene</h3>
 <p>The generative art movement started to take off in the 1960s in the art scene. Artists used computers to generate art pieces. Here is an example from 1966:</p>
 <p><figure align="center">
 <img src="./nake-walk-through-raster.png"/>
 <figcaption align="center"><b>Picture 1 - Walk Through Raster, Frieder Nake 1966</b></figcaption>
 </figure></p>
-<h3>The demoscene</h3>
+<h3>The Demoscene</h3>
 <p>Quoting from Wikipedia:</p>
 <blockquote>
-<p>The demoscene: is an international computer art subculture focused on producing demos: self-contained, sometimes extremely small, computer programs that produce audiovisual presentations. </p>
+<p>The Demoscene: is an international computer art subculture focused on producing demos: self-contained, sometimes extremely small, computer programs that produce audiovisual presentations. </p>
 </blockquote>
-<p>The demoscene started in the early 1980s. In the demoscene, there are demo categories that artificially restrict the program size of the demos.
+<p>The Demoscene started in the early 1980s. In the Demoscene, there are demo categories that artificially restrict the program size of the demos.
 The most widespread categories are the 64Kbyte demos and the 4KByte demos. Because of the small code size, these artworks rely very heavily on algorithmic generation.
 The most beautiful 64Kbyte or 4Kbyte demos are basically high-quality generative artworks.</p>
-<p>This is one of the best 64kbyte demos of all time:</p>
-<p><a href="https://www.youtube.com/watch?v=MAnhcUNHRW0" title="Chaos Theory by Conspiracy">https://www.youtube.com/watch?v=MAnhcUNHRW0</a></p>
-<p>And here is one of the most amazing 4kbyte ones:</p>
-<p><a href="https://www.youtube.com/watch?v=jB0vBmiTr6o" title="elevated by Rgba &amp; TBC">https://www.youtube.com/watch?v=jB0vBmiTr6o</a></p>
+
+<h3>Generative Art in the NFT space</h3>
+
+<p>Recently generative art became also present in the NFT space. Generative art NFT projects usually work the following way: creators create generative art programs. These programs take one number as a parameter (seed)
+and the program produces a different image with each seed parameter. Users can mint, own and trade an NFT artwork associated with a given seed.</p>
 
 <h2>Scenechain basics</h2>
-<p><span class="sc">Scenechain</span> demos work on a virtual demo machine which we call the <strong class="sc">Scenechain Virtual Machine</strong>, which is basically a webassembly virtual machine with some audio-visual APIs that are thin webassembly wrappers of browser APIs like <code>WebGL</code>, <code>Web-Audio</code> and the <code>Canvas API</code>.
-In practice, <span class="sc">Scenechain</span> demos work in a web browser. </p>
-<p>The <span class="sc">Scenechain</span> demo code lives in the <strong class="sc">Scenechain code space</strong>. The <span class="sc">Scenechain code space</span> is limited:
+
+<p>Scenechain is inspired by all the above-mentioned movements but is different from all of them.
+Although it borrows code-space scarcity from the Demoscene the big difference between Scenechain and the Demoscene is that most of the Demoscene community members are strongly against directly making money from demos:
+they create demos purely for the love of it. Scenechain also differs from more traditional generative-art NFT platforms in that it heavily relies on audio besides visuals and contains incentivization mechanisms
+not present in other projects (like code-space scarcity, incentivized composability.)</p>
+
+<p><span class="sc">Scenechain</span> real-time movies work on a virtual machine which we call the <strong class="sc">Scenechain Virtual Machine</strong>, which is basically a webassembly virtual machine with some audio-visual APIs that are thin webassembly wrappers of browser APIs like <code>WebGL</code>, <code>Web-Audio</code> and the <code>Canvas API</code>.
+In practice, <span class="sc">Scenechain</span> movies are played in a web browser. </p>
+<p>The <span class="sc">Scenechain</span> movie code lives in the <strong class="sc">Scenechain code space</strong>. The <span class="sc">Scenechain code space</span> is limited:
 Anyone can upload code to the code space in a permissionless way, but it costs SCODE tokens to upload code. SCODE is a scarce deflationary asset.
-This way creators are incentivized to achieve the desired audio-visual effect using as small code-size as possible. The created demos are NFTs that can be sold for Solana.</p>
+This way creators are incentivized to achieve the desired audio-visual effect using as small code-size as possible. The created movies are NFTs that can be sold for Solana.</p>
 <h2>Composability</h2>
 <p>The above-mentioned mechanism would create an interesting NFT marketplace, but the secret sauce and core innovation of <span class="sc">Scenechain</span> are that it also incentivizes creative collaboration through composability (otherwise known by programmers as <em>code reuse</em>).
 Creating useful reusable open-source code libraries always suffered from the <strong>tragedy-of-commons</strong> problem: people gain tremendous value from these libraries but their creators are not financially rewarded for it.
-In <span class="sc">Scenechain</span> in order to create amazing demos with small code size, creators are incentivized to refer to other already uploaded code libraries and call functions from them,
+In <span class="sc">Scenechain</span> in order to create amazing movies with small code size, creators are incentivized to refer to other already uploaded code libraries and call functions from them,
 because as we will see it is cheaper to refer to code than to duplicate it. The creators of the libraries are automatically rewarded when other creators reuse their code.
 We will present an example in the next chapter on how this composability can be used to achieve great things using other people's work.
 We believe that in the future it will also be used in ways that we cannot anticipate today.
@@ -386,22 +393,23 @@ The package is the unit of ownership in <span class="sc">Scenechain</span>. When
 <p>A <span class="sc">Scenechain package</span> - being a webassembly module - contains webassembly <strong>functions</strong>. Some of these functions are declared <strong>exported functions</strong>.
 An exported function in one package can be <strong>imported</strong> and called from any other (later) package in the code space: this is the way creators can reuse already uploaded code.</p>
 <p class="info">
-Note that exported and imported functions are not a <span class="sc">Scenechain</span> invention, they are part of the webassembly format, <span class="sc">Scenechain</span> just uses a naming convention that the package id (which is a Solana account id) is the name used as webassembly module name when importing.</p>
-<p>A <span class="sc">Scenechain package</span> can be a <strong>demo</strong> or a <strong>library</strong>.
-A demo can still contain exported functions, its only speciality is that it contains a function called <code>_play()</code> which is the entry point of the audio-visual demo.
-Although the <code>_play()</code> function is exported to be accessed by the demo runtime, other packages can never import this function.
+Note that exported and imported functions are not a <span class="sc">Scenechain</span> invention, they are part of the webassembly format, <span class="sc">Scenechain</span> just uses a naming convention that the package id (which is a Solana account id)
+is the name used as webassembly module name when importing.</p>
+<p>A <span class="sc">Scenechain package</span> can be a <strong>movie</strong> or a <strong>library</strong>.
+A movie can still contain exported functions, its only speciality is that it contains a function called <code>_play()</code> which is the entry point of the audio-visual movie.
+Although the <code>_play()</code> function is exported to be accessed by the runtime, other packages can never import this function.
 (The general rule is that any function with a name starting with the underscore character is exported for the runtime and cannot be imported by other packages.)</p>
 <p><figure align="center">
 <img src="./scenechain_packages.svg" alt="Scenechain packages referring to each other" />
 <figcaption align="center"><b>Picture 2 - Scenechain packages referring to each other</b></figcaption>
 </figure></p>
 <p>
-In the above diagram we can see a use-case with 3 libraries and 2 demos (one of which is not really a demo but a song).
+In the above diagram, we can see a use-case with 3 libraries and 2 movies (one of which is not really a movie but a song).
 The arrows represent imports in the direction of function call (the arrow goes from the importer to the exported function).
-Eve is a composer who composed a song. She offers this song technically as a demo, because her package has a <code>_play()</code> function.
+Eve is a composer who composed a song. She offers this song technically as a movie because her package has a <code>_play()</code> function.
 She is not a coder though: her package contains just a few lines of code and her compressed music. In the short code she calls Alice's library to decompress the music from the compressed representation stored in her package,
-calls Carol's music visualizer to display something on the screen during the music and calls Bob's music player to play the music. In addition to this she exports a <code>get_song()</code> function so that demo coders
-who are not composers can create demos based on her music. This is what Dave does with his demo: Uses Eve's music during his demo and also uses Bob's music player library to play the music.</p>
+calls Carol's music visualizer to display something on the screen during the music, and calls Bob's music player to play the music. In addition to this she exports a <code>get_song()</code> function so that movie coders
+who are not composers can create movies based on her music. This is what Dave does with his movie: Uses Eve's music during his movie and also uses Bob's music player library to play the music.</p>
 <h2>SCODE tokenomics</h2>
 <p>SCODE is a standard spl token on Solana. Its token address is: <code>HWnfNCDHWJqqXQBpF379ubyLPhk8sdvFAa2mBsn4T6Bz</code></p>
 <p>1,000,000,000 SCODE tokens has been minted in the beginning.
@@ -428,7 +436,7 @@ If we design algorithms to discourage this then we get other kinds of more nuanc
 <p>We considered multiple complex systems to solve these problems purely with algorithms. Each of these systems has some drawbacks and some of them are very complicated.
 Eventually, we decided to go with a relatively simple system and not only rely on algorithms but also on <strong>social contracts</strong> in the community. </p>
 <p>First of all, <code>dependency_cost</code> is 0 for library packages. (packages that do not have a <code>_play()</code> function)</p>
-<p>For demo packages, the <code>dependency_cost</code> is calculated based on the functions called from the <code>_play()</code> function of this package and the functions called by them recursively.
+<p>For movie packages, the <code>dependency_cost</code> is calculated based on the functions called from the <code>_play()</code> function of this package and the functions called by them recursively.
 First, a list of all these called functions is assembled, which we call dependencies. Then for each such dependency, a cost contribution is calculated as the size of the function multiplied by a <code>p</code> quotient. </p>
 <pre><code>dependency_cost = for_each_dependency_function_F(size(F) * p)
 </code></pre>
@@ -440,17 +448,17 @@ First, a list of all these called functions is assembled, which we call dependen
 <p>This cost is simply transferred to the owners of the dependency functions.</p>
 
 <p>In addition to the math, the social contract used here is that the community values originality and reuse of original code where possible.
-Any demo which has a library that has obvious copycats in their dependency tree will be worth less by NFT collectors than the ones that use the ecosystem as intended.
+Any movie which has a library that has obvious copycats in their dependency tree will be worth less by NFT collectors than the ones that use the ecosystem as intended.
 We will discuss <span class="sc">Scenechain</span> social contracts in more detail in the <em class="sc">Scenechain manifesto</em> chapter.   </p>
 
 <h3>Implications of the dependency royalties calculation</h3>
 <p>The mechanism above means that the cost of using a package is somewhere between 3% and 5% of its size.
 The formula incentivizes the usage of functions earlier in the code space: besides the social contracts mentioned above,
 this is also something that incentivizes original work instead of copycats.</p>
-<p>This mechanism implies that it is profitable to publish a library if its functions will be called (directly or indirectly) from at least 20-33 demos on average.
+<p>This mechanism implies that it is profitable to publish a library if its functions will be called (directly or indirectly) from at least 20-33 movies on average.
 (Actually, sometimes a package can be profitable with significantly less use because as we will see the dependencies of a package also get some royalties from package sales.)
 Anyway, 20-33 usage can be easily achieved in the case of certain generic functions.
-Also, note that if a creator needs to write a function for a demo anyway it might be a good idea to export it even if only 1 or 2 packages would use it.</p>
+Also, note that if a creator needs to write a function for a movie anyway it might be a good idea to export it even if only 1 or 2 packages would use it.</p>
 
 <h3>Tokenomics implications to the size of the code space</h3>
 <p>Because 0.98 SCODE from the 1,000,000,000 SCODE is always burnt for each uploaded byte the maximum capacity of the code space is around 1 GByte.
@@ -502,8 +510,8 @@ If they could succeed it would demotivate other authors to create original conte
 <p>With regards to copycats, not all cases are black-and-white</p>
 </blockquote>
 <p>We don't like when an exported function is just copied instead of imported from a new package. On the other hand, if the function is not exported but solves an important general problem, it should be ok to copy.
-(Example: Someone writes a nice short generic function to do Fast Fourier Transform on sound data inside a demo, but they do not export the function. Other people should copy and export it then.)
-But just copying every private function of a demo and publishing a very similar demo is not valuable. </p>
+(Example: Someone writes a nice short generic function to do Fast Fourier Transform on sound data inside a movie, but they do not export the function. Other people should copy and export it then.)
+But just copying every private function of a movie and publishing a very similar movie is not valuable. </p>
 <p>Some copies have some improvements on the original, in this case, it is also ok to copy, but it can be a fine line.
 We certainly don't ban anything and we can value things just a little bit more or a little bit less, we don't need black and white judgment all the time.</p>
 <blockquote>
@@ -520,16 +528,16 @@ Human judgment is important in these cases, these are things that would be hard 
 <p>The <span class="sc">Scenechain</span> on-chain code is responsible for the management of package uploads, cost calculation, royalty distribution, and NFT trading.
 It never actually executes the webassembly code inside the packages. The webassembly code is executed off-chain in the browser (or any environment that adheres to the <em class="sc">Scenechain Virtual Machine Specification</em>).
 Similarly to the on-chain code the <span class="sc">Scenechain</span> off-chain codebase is open-source.
-It contains a web application in which users can upload, browse and trade packages, and run demos.
+It contains a web application in which users can upload, browse and trade packages, and run movies.
 The web app will be run by the <span class="sc">Scenechain</span> team, but anyone else can run the web app parallelly.
 Also, anyone can create similar web apps: it is not part of the <span class="sc">Scenechain protocol</span>.
 Strictly speaking, the <span class="sc">Scenechain protocol</span> consists of the on-chain code and the <em class="sc">Scenechain Virtual Machine Specification</em>.
-(For example, this specification will contain the audio-visual APIs available for the demos.)
+(For example, this specification will contain the audio-visual APIs available for the movies.)
 The <span class="sc">Scenechain</span> off-chain code can be treated as a <strong>reference implementation</strong> of the off-chain parts of the protocol.</p>
 <p>The <span class="sc">Scenechain</span> web app is a blockchain explorer and a lightweight development environment. It provides the following capabilities to the users:</p>
 <ul>
 <li>Users can browse packages in the order of upload. It is possible to filter for certain attributes like code size.</li>
-<li>It is possible to run the demos.</li>
+<li>It is possible to run the movies.</li>
 <li>The webassembly code in packages can be viewed converted to textual webassembly.</li>
 <li>Possibly we will store other optional information off-chain for packages and they can be also viewed. (Example: source code if the code was compiled from a higher-level language, Readme file, etc...)</li>
 <li>Creators can author and upload new packages. Also, they can test the packages before uploading.  </li>
@@ -583,27 +591,27 @@ checks whether they are correct by comparing their hash to the stored hash.)
 </p>
 
 <h2>Scenechain Virtual Machine and web app tech details</h2>
-<p><span class="sc">Scenechain</span> demo developers will need to create packages that contain webassembly functions which will run
+<p><span class="sc">Scenechain</span> movie developers will need to create packages that contain webassembly functions which will run
 in the browser in a sandboxed environment.
-In these functions, they will be able to use the <strong class="sc">Scenechain Demo API</strong>. The <span class="sc">Scenechain Demo API</span> contains
+In these functions, they will be able to use the <strong class="sc">Scenechain Movie API</strong>. The <span class="sc">Scenechain Movie API</span> contains
 the low-level functions to create visuals and sound effects programmatically, and also will
-contain functions to gain user input to be able to create interactive experiences. The <span class="sc">Scenechain</span> Demo API will
+contain functions to gain user input to be able to create interactive experiences. The <span class="sc">Scenechain</span> Movie API will
 be mostly a thin wrapper around <code>WebGL</code>, <code>Web-Audio</code>, and the <code>Canvas API</code> which we will expose from the embedding Javascript environment.
-The webassembly code will be heavily sandboxed: not being able to access anything which is not part of the <span class="sc">Scenechain Demo API</span>.</p>
-<p>The demos can decide the viewport size they use and they can communicate this to the embedding environment, so the embedding environment may decide what resolution it uses during playback.
-Demos are encouraged to use the <strong>1080p</strong> resolution today, but this is not a requirement in the protocol, as the community may decide to prefer higher resolutions in the case of later demos.</p>
-<p>The smart contracts do not and cannot decide whether a webassembly demo is buggy or not. People will simply not collect demos that are deemed not worthy.
+The webassembly code will be heavily sandboxed: not being able to access anything which is not part of the <span class="sc">Scenechain Movie API</span>.</p>
+<p>The movies can decide the viewport size they use and they can communicate this to the embedding environment, so the embedding environment may decide what resolution it uses during playback.
+Movies are encouraged to use the <strong>1080p</strong> resolution today, but this is not a requirement in the protocol, as the community may decide to prefer higher resolutions in the case of later movies.</p>
+<p>The smart contracts do not and cannot decide whether a webassembly movie is buggy or not. People will simply not collect movies that are deemed not worthy.
 The client code only needs to ensure that sandboxing works well and the web app does not hang when the webassembly code is not responsive.    </p>
 <p>The <span class="sc">Scenechain</span> web app will be developed using Nodejs and Javascript on the server-side. In the browser, we will use Reactjs with Javascript.</p>
 <p>Please note that the webassembly modules in the packages cannot be used as they are in the browser.
-They lack the <span class="sc">Scenechain Demo API</span> imports and also only one module can be executed at one time in the browser.
-For this reason, when running a demo package, the web app will recursively download all its dependencies, and merge them into an <strong>executable</strong> webassembly module.
-In the case of the packages in <code>Picture 2</code>, if we want to run the demo <code>Dave's awesome demo</code>, all the packages on the picture will be downloaded and merged. During the merge, the following happens:</p>
+They lack the <span class="sc">Scenechain Movie API</span> imports and also only one module can be executed at one time in the browser.
+For this reason, when running a movie package, the web app will recursively download all its dependencies, and merge them into an <strong>executable</strong> webassembly module.
+In the case of the packages in <code>Picture 2</code>, if we want to run the movie <code>Dave's awesome movie</code>, all the packages on the picture will be downloaded and merged. During the merge, the following happens:</p>
 <ul>
 <li>All the functions in all the packages are appended together</li>
-<li>Intermediary exports and imports are eliminated, the only exports remaining are the exports of the demo package starting with an underscore.</li>
+<li>Intermediary exports and imports are eliminated, the only exports remaining are the exports of the movie package starting with an underscore.</li>
 <li>Function indices are reshuffled (for example in call instructions)</li>
-<li>Imports are added from the embedding environment to support the <span class="sc">SceneChain Demo API</span>.</li>
+<li>Imports are added from the embedding environment to support the <span class="sc">SceneChain Movie API</span>.</li>
 </ul>
 
 <h2>Roadmap</h2>
@@ -629,7 +637,7 @@ Some of the efforts will be partly parallelized, but the rough order is the foll
 <ul>
 <li>Webassembly format operations (like merging packages)</li>
 <li>Smart contract development</li>
-<li><span class="sc">Scenechain Demo API</span> development</li>
+<li><span class="sc">Scenechain Movie API</span> development</li>
 <li>Webapp development</li>
 </ul>
 <p>After the mainnet release, we can concentrate more on higher-level convenience features which are implemented in off-chain code. Examples:</p>
